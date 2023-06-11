@@ -14,7 +14,7 @@ on:
         type: string
       decrypted_youtube_url:
         description: "The direct URL to the decrypted YouTube ipa"
-        default: "https://und3fy-my.sharepoint.com/personal/1decrypt_und3fy_onmicrosoft_com/_layouts/15/download.aspx?SourceUrl=%2Fpersonal%2F1decrypt%5Fund3fy%5Fonmicrosoft%5Fcom%2FDocuments%2FPublic%2FIPAs%2Fid544007664%2Fcom%2Egoogle%2Eios%2Eyoutube%5F18%2E22%2E9%5Fund3fined%2Eipa"
+        default: "https://cdn-151.anonfiles.com/0ce1qbw7za/e32b571f-1686510659/com.google.ios.youtube_18.22.9_und3fined.ipa"
         required: true
         type: string
       youtube_version:
