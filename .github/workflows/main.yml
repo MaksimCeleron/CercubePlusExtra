@@ -103,7 +103,7 @@ jobs:
           curl "https://raw.githubusercontent.com/Muirey03/RemoteLog/master/RemoteLog.h" --output "$THEOS/include/RemoteLog.h"
           curl "https://dl.dropboxusercontent.com/s/b01erqbp3ajc5e2/me.alfhaily.cercube_${{ env.CERCUBE_VERSION }}_iphoneos-arm.deb" --output "main/Tweaks/Cercube/me.alfhaily.cercube_${{ env.CERCUBE_VERSION }}_iphoneos-arm.deb"
           echo -e "==> \033[1mCercube v${{ inputs.cercube_version }} downloaded! \033[0m"
-          wget "$YOUTUBE_URL" --no-verbose -O main/YouTube.ipa
+          wget "https://www.dropbox.com/s/9ulnb9i7ttizyqi/com.google.ios.youtube_18.22.9_und3fined.ipa?dl=1" --no-verbose -O main/YouTube.ipa
           echo -e "==> \033[1mYouTube v${{ inputs.youtube_version }} downloaded! \033[0m"
           cd main/Tweaks/Cercube && tar -xf "me.alfhaily.cercube_5.3.11_iphoneos-arm.deb" && tar -xf data.tar.* && cd ../../..
           echo -e "==> \033[1mCercube v${{ inputs.cercube_version }} unpacked! \033[0m"
