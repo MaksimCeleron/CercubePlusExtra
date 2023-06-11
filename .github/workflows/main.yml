@@ -14,7 +14,7 @@ on:
         type: string
       decrypted_youtube_url:
         description: "The direct URL to the decrypted YouTube ipa"
-        default: "https://cdn-151.anonfiles.com/0ce1qbw7za/e32b571f-1686510659/com.google.ios.youtube_18.22.9_und3fined.ipa"
+        default: "https://www.dropbox.com/s/9ulnb9i7ttizyqi/com.google.ios.youtube_18.22.9_und3fined.ipa?dl=1"
         required: true
         type: string
       youtube_version:
