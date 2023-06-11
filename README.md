@@ -1,7 +1,7 @@
 ## Cercube with extra features!
 
 
-![IMAGE_CERCUBEPLUS_PREVIEW](https://cdn-153.anonfiles.com/d3n0y9v6za/74526436-1686000798/CERCUBEPLUSDEMO.png)
+![IMAGE_CERCUBEPLUS_PREVIEW](https://cdn-153.anonfiles.com/d3n0y9v6za/148f7443-1686515501/CERCUBEPLUSDEMO.png)
 
 
 
