@@ -110,13 +110,54 @@ jobs:
           unzip -q main/YouTube.ipa -d main/tmp
           rm -rf main/tmp/Payload/YouTube.app/_CodeSignature/CodeResources
           rm -rf main/tmp/Payload/YouTube.app/PlugIns/*
-          cp -R main/Extensions/*.appex main/tmp/PTo add a README file to your GitHub repository, you can follow these steps:
+          cp -R main/Extensions/*.appex main/tmp/Payload/YouTube.app/PlugIns
+          echo -e "==> \033[1mYouTube v${{ inputs.youtube_version }} unpacked! \033[0m"
 
-1. Navigate to your repository on GitHub and click on the "Add file" button.
-2. Select "Create new file" from the dropdown menu.
-3. In the "Name your file..." field, type "README.md".
-4. Add content to your README file using Markdown syntax. You can include a project description, setup instructions, usage examples, and any other information you want to share with users.
-5. Preview your README file by clicking on the "Preview" tab.
-6. When you're satisfied with your README file, click on the "Commit new file" button at the bottom of the page.
+        env:
+          THEOS: ${{ github.workspace }}/theos
+          CERCUBE_VERSION: ${{ inputs.cercube_version }}
+          YOUTUBE_VERSION: ${{ inputs.youtube_version }}
+          YOUTUBE_URL: ${{ inputs.decrypted_youtube_url }}
 
-Your README file will now be visible on your repository's main page. It will also be displayed on the GitHub repository landing page if you decide to make your repository public. A good README file can help users understand what your project is about, how to use it, and how to contribute to it.
+      - name: Fix Compiling & Build Package
+        id: build_package
+        run: |
+          (echo PATH=\"$(brew --prefix make)/libexec/gnubin:\$PATH\" >> ~/.zprofile)
+          cd ${{ github.workspace }}/main
+          sed -i '' "12s#.*#BUNDLE_ID = ${{ env.BUNDLE_ID }}#g" Makefile
+          sed -i '' "11s#.*#DISPLAY_NAME = ${{ env.APP_NAME }}#g" Makefile
+          make package FINALPACKAGE=1
+          (mv "packages/$(ls -t packages | head -n1)" "packages/CercubePlus_${{ env.YOUTUBE_VERSION }}_${{ env.CERCUBE_VERSION }}.ipa")
+          echo "package=$(ls -t packages | head -n1)" >>$GITHUB_OUTPUT
+          echo -e "==> \033[1mSHASUM256: $(shasum -a 256 packages/*.ipa | cut -f1 -d' ')\033[0m"
+          echo -e "==> \033[1mBundle ID: ${{ env.BUNDLE_ID }}\033[0m"
+        env:
+          THEOS: ${{ github.workspace }}/theos
+          CERCUBE_VERSION: ${{ inputs.cercube_version }}
+          YOUTUBE_VERSION: ${{ inputs.youtube_version }}
+          BUNDLE_ID: ${{ inputs.bundle_id }}
+          APP_NAME: ${{ inputs.app_name }}
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3.1.2
+        env:
+          CERCUBE_VERSION: ${{ inputs.cercube_version }}
+          YOUTUBE_VERSION: ${{ inputs.youtube_version }}
+        with:
+          name: CercubePlus_${{ env.YOUTUBE_VERSION }}_${{ env.CERCUBE_VERSION }}
+          path: ${{ github.workspace }}/main/packages/${{ steps.build_package.outputs.package }}
+          if-no-files-found: error
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v0.1.15
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CERCUBE_VERSION: ${{ inputs.CERCUBE_VERSION }}
+          YOUTUBE_VERSION: ${{ inputs.youtube_version }}
+          DRAFT: ${{ inputs.create_release }}
+        with:
+          tag_name: v${{ env.YOUTUBE_VERSION }}-${{ env.CERCUBE_VERSION }}-(${{ github.run_number }})
+          name: v${{ env.YOUTUBE_VERSION }}-${{ env.CERCUBE_VERSION }}-(${{ github.run_number }})
+          files: main/packages/*.ipa
+          draft: ${{ env.DRAFT }}
