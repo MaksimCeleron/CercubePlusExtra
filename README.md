@@ -33,8 +33,6 @@
 # Credits
 
 <table id='maintainer credit'>
-Cercube is an original tweak by Majd Alfhaily @majd!
-
 Special thanks to these developer(s) for maintaining and improving CercubePlus (@qnblackcat is the OG dev)
 <tr>
 <td id='arichorn'>
@@ -64,12 +62,19 @@ Special thanks to these developer(s) for maintaining and improving CercubePlus (
 
 <table id='credit'>
 Special thanks to all the developers who have contributed to CercubePlus/CercubePlusExtra!
+(Cercube is an original tweak by Majd Alfhaily @majd)
 <tr>
 <td id='majd'>
 <a href='https://github.com/majd'>
 <img src='https://github.com/majd.png' width='140px;'>
 </a>
 <h4 align='center'><a href='https://github.com/majd'>Majd Alfhaily</a></h4>
+</td>
+<td id='PoomSmart'>
+<a href='https://github.com/PoomSmart'>
+<img src='https://github.com/PoomSmart.png' width='140px;'>
+</a>
+<h4 align='center'><a href='https://github.com/PoomSmart'>PoomSmart</a></h4>
 </td>
 <td id='miro92'>
 <a href='https://github.com/MiRO92'>
