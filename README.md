@@ -62,6 +62,7 @@ Special thanks to these developer(s) for maintaining and improving CercubePlus (
 
 <table id='credit'>
 Special thanks to all the developers who have contributed to CercubePlus/CercubePlusExtra!
+    
 (Cercube is an original tweak by Majd Alfhaily @majd)
 <tr>
 <td id='majd'>
