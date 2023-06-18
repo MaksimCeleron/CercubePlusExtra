@@ -35,7 +35,7 @@
 <table id='maintainer credit'>
 Cercube is an original tweak by Majd Alfhaily @majd!
 
-Special thanks to these developer(s) for maintaining and improving CercubePlus! (@qnblackcat is the OG dev)
+Special thanks to these developer(s) for maintaining and improving CercubePlus (@qnblackcat is the OG dev)
 <tr>
 <td id='arichorn'>
 <a href='https://github.com/arichorn'>
