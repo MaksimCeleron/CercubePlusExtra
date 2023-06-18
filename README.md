@@ -1,7 +1,7 @@
 ## Cercube with extra features!
 
 
-![IMAGE_CERCUBEPLUS_PREVIEW](https://cdn-153.anonfiles.com/d3n0y9v6za/148f7443-1686515501/CERCUBEPLUSDEMO.png)
+![IMAGE_CERCUBEPLUS_PREVIEW](https://gcdnb.pbrd.co/images/PnpTdZf0IXbd.png)
 
 
 
@@ -33,13 +33,21 @@
 # Credits
 
 <table id='maintainer credit'>
-Special thanks to these developer(s) for maintaining and improving CercubePlus!
+Cercube is an original tweak by Majd Alfhaily @majd!
+
+Special thanks to these developer(s) for maintaining and improving CercubePlus! (@qnblackcat is the OG dev)
 <tr>
 <td id='arichorn'>
 <a href='https://github.com/arichorn'>
 <img src='https://github.com/arichorn.png' width='140px;'>
 </a>
 <h4 align='center'><a href='https://github.com/arichorn'>arichorn</a></h4>
+</td>
+<td id='qnblackcat'>
+<a href='https://github.com/qnblackcat'>
+<img src='https://github.com/qnblackcat.png' width='140px;'>
+</a>
+<h4 align='center'><a href='https://github.com/qnblackcat'>Qnblackcat</a></h4>
 </td>
 <td id='dayanch96'>
 <a href='https://github.com/dayanch96'>
