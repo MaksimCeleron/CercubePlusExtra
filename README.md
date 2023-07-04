@@ -258,7 +258,8 @@ any many more...
 
 - **CercubePlus** (or you can call it Cercube+) requires iOS & iPadOS 14.0 and later. The latest version of **CercubePlus** can be found in the [Release tab](https://github.com/Balackburn/CercubePlusExtra/releases/latest).
 
-- For AltStore user: [Open in AltStore (v18.18.2-5.3.11)](https://tinyurl.com/5a5jn7ra) - It will take a while to install because AltStore needs to download the IPA first.
+- For AltStore user: [Add to Altstore/Sidestore](https://tinyurl.com/CercubePlusSource)
+
 
 </details>
 
