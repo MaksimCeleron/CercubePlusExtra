@@ -168,4 +168,4 @@ jobs:
           name: v${{ env.YOUTUBE_VERSION }}-${{ env.CERCUBE_VERSION }}-(${{ github.run_number }})
           files: main/packages/*.ipa
           draft: ${{ env.DRAFT }}
-          body_path: .github/release_notes.md
+          body_path: ${{ github.workspace }}/release_notes.md
