@@ -147,6 +147,14 @@ jobs:
           path: ${{ github.workspace }}/main/packages/${{ steps.build_package.outputs.package }}
           if-no-files-found: error
 
+      - name: Prepare Release Notes
+        run: |
+          export TODAY=$(date '+%Y-%m-%d')
+          sed -e "s/%%CERCUBE_VERSION%%/${{ inputs.cercube_version }}/g" \
+              -e "s/%%YOUTUBE_VERSION%%/${{ inputs.youtube_version }}/g" \
+              -e "s/%%TODAY%%/${TODAY}/g" \
+              .github/RELEASE_TEMPLATE/Release.md > .github/release_notes.md
+
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v0.1.15
@@ -160,3 +168,4 @@ jobs:
           name: v${{ env.YOUTUBE_VERSION }}-${{ env.CERCUBE_VERSION }}-(${{ github.run_number }})
           files: main/packages/*.ipa
           draft: ${{ env.DRAFT }}
+          body_path: .github/release_notes.md
