@@ -167,3 +167,11 @@ jobs:
           files: main/packages/*.ipa
           draft: ${{ env.DRAFT }}
           body_path: ${{ github.workspace }}/release_notes.md
+
+      - name: Update Altstore source with latest release
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.REMOTE_REPO_ACCESS_TOKEN }}" \
+            -H "Content-Type:application/json" \
+            --data '{"event_type": "update-altstore-source-trigger"}' \
+            https://api.github.com/repos/Balackburn/CercubePlusAltstore/dispatches
