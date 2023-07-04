@@ -33,7 +33,7 @@
 # Credits
 
 <table id='maintainer credit'>
-Special thanks to these developer(s) for maintaining and improving CercubePlus (@qnblackcat is the OG dev)
+Special thanks to these developer(s) for maintaining and improving CercubePlus/CercubePlusExtra (@qnblackcat is the OG dev)
 <tr>
 <td id='arichorn'>
 <a href='https://github.com/arichorn'>
@@ -58,6 +58,12 @@ Special thanks to these developer(s) for maintaining and improving CercubePlus (
 <img src='https://github.com/ssuesskind.png' width='140px;'>
 </a>
 <h4 align='center'><a href='https://github.com/ssuesskind'>ssuesskind</a></h4>
+</td>
+<td id='Balackburn'>
+<a href='https://github.com/Balackburn'>
+<img src='https://github.com/Balackburn.png' width='140px;'>
+</a>
+<h4 align='center'><a href='https://github.com/Balackburn'>Balackburn</a></h4>
 </td>
 
 <table id='credit'>
@@ -232,13 +238,17 @@ any many more...
 
 - The Updated Dark Mode in the YouTube App is not Present or Working in Cercube v5.3.13 & older versions
 
-2. **LowContrastMode**: this tweak doesn't work everywhere with every ui element on the YouTube App.
+2. **LowContrastMode**: this tweak doesn't work correctly with the ui on v17.39.4 or later versions of the YouTube App. [WORKAROUND - go to `Settings > YouTubeRebornPlus > Miscellaneous > Enable App Version Spoofer` and go to `Version Spoofer Picker` and select `v17.38.10`]
 
-3. **YTUHD**: [Stuttering on 4K videos](https://github.com/qnblackcat/uYouPlus/issues/6).
+3. **YTSpeed**: this tweak doesn't show playback speed controls in the v18.19.1 or later versions of the YouTube App. [WORKAROUND - go to `Settings > YouTubeRebornPlus > Miscellaneous > Enable App Version Spoofer` and go to `Version Spoofer Picker` and select `v18.18.2`]
 
-4. **YouPiP** (iOS 14.0 - 14.4.2): due to Apple's fault, you may encounter the *speedup-bug* as described [here](https://drive.google.com/file/d/1NKdv1fr_KRWgD8nhkMDfG2eLBnbdeVtX/view?usp=sharing). The bug also happens when you try to play multi-sources of sound at the same time. Enable **LegacyPiP** is a workaround. Keep in mind that LegacyPiP also removes UHD quality and breaks YouTube Autoplay next. Use it at your own risk!
+4. **YTClassicVideoQuality**: this tweak that shows the old video quality menu has stopped working on v18.19.1 or later versions of the YouTube App. [WORKAROUND - read YTSpeed's workaround above]
 
-5. **Not a bug**: 
+5. **YTUHD**: [Stuttering on 4K videos](https://github.com/qnblackcat/uYouPlus/issues/6).
+
+6. **YouPiP** (iOS 14.0 - 14.4.2): due to Apple's fault, you may encounter the *speedup-bug* as described [here](https://drive.google.com/file/d/1NKdv1fr_KRWgD8nhkMDfG2eLBnbdeVtX/view?usp=sharing). The bug also happens when you try to play multi-sources of sound at the same time. Enable **LegacyPiP** is a workaround. Keep in mind that LegacyPiP also removes UHD quality and breaks YouTube Autoplay next. Use it at your own risk!
+
+7. **Not a bug**: 
 
 - The app won't be able to receive push notifications if you use a free developer account to sideload it. 
 
@@ -250,32 +260,27 @@ any many more...
 
 - For AltStore user: [Open in AltStore (v18.18.2-5.3.11)](https://tinyurl.com/5a5jn7ra) - It will take a while to install because AltStore needs to download the IPA first.
 
-<details>
-  <summary>Alternative Download</summary>
-  
-[Open in AltStore (v18.14.1-5.3.11-F2)](https://tinyurl.com/4exxknn8) - This is the **v18.14.1-5.3.11-F2** release. only use this to resolve the OLED/OLD Dark Mode Problem.
-
 </details>
 
-- Version info: _(May 9 2023)_
+- Version info: _(July 4th 2023)_
 
 <details>
   <summary>Expand!</summary>
 
 | **Tweaks/App** | **Developer** | **Version** | **Open source** |
 | - | - | :-: | :-:  |
-| **YouTube** | Google Inc | 18.21.3 | ✖︎ |
+| **YouTube** | Google Inc | 18.25.1 | ✖︎ |
 | **Cercube** | Majd Alfhaily | 5.3.11 | ✖︎ |
 | **Open in YouTube** | [CokePokes](https://github.com/CokePokes/) | 1.2 | ✖︎ |
 | **YTNoShorts** | [MiRO92](https://twitter.com/miro92) | 1.0.2 | [✔︎](https://github.com/MiRO92/YTNoShorts) |
-| **iSponsorBlock** | [Galactic-Dev](https://github.com/Galactic-Dev) | 1.0-15 | [✔︎](https://github.com/Galactic-Dev/iSponsorBlock) |
+| **iSponsorBlock** | [Galactic-Dev](https://github.com/Galactic-Dev) | 1.2 | [✔︎](https://github.com/Galactic-Dev/iSponsorBlock) |
 | **BigYTMiniPlayer** | [Galactic-Dev](https://github.com/Galactic-Dev) | 1.0-1 | [✔︎](https://github.com/Galactic-Dev/BigYTMiniPlayer) |
 | **YTNoHoverCards** | [level3tjg](https://twitter.com/level3tjg) | 0.0.3 | [✔︎](https://github.com/level3tjg/YTNoHoverCards) |
 | **YTMiniplayerEnabler** | [level3tjg](https://twitter.com/level3tjg) | 0.0.2 | [✔︎](https://github.com/level3tjg/YTMiniplayerEnabler) |
-| **DontEatMyContent** | [therealFoxster](https://github.com/therealFoxster) | 1.0.6 | [✔︎](https://github.com/therealFoxster/DontEatMyContent) |
+| **DontEatMyContent** | [therealFoxster](https://github.com/therealFoxster) | 1.0.10 | [✔︎](https://github.com/therealFoxster/DontEatMyContent) |
 | **LowContrastMode** | arichorn | 1.2.3 | [✔︎](https://github.com/arichorn/LowContrastMode) |
 | **YTUHD** | PoomSmart | 1.4.0 | [✔︎](https://github.com/PoomSmart/YTUHD) |
-| **YouPiP** | PoomSmart | 1.7.19-2 | [✔︎](https://github.com/PoomSmart/YouPiP) |
+| **YouPiP** | PoomSmart | 1.7.20 | [✔︎](https://github.com/PoomSmart/YouPiP) |
 | **YouMute** | PoomSmart | 1.1.1-1 | [✔︎](https://github.com/PoomSmart/YouMute) |
 | **YTABConfig** | PoomSmart | 1.5.0-1 | [✔︎](https://github.com/PoomSmart/YTABConfig) |
 | **IAmYouTube** | PoomSmart | 1.2.0 | [✔︎](https://github.com/PoomSmart/IAmYouTube) |
