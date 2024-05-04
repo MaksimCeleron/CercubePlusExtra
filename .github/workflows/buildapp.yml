@@ -78,7 +78,9 @@ jobs:
       - name: Download iOS 15.5 SDK
         if: steps.SDK.outputs.cache-hit != 'true'
         run: |
-          svn checkout -q https://github.com/chrisharper22/sdks/trunk/iPhoneOS15.5.sdk
+          git clone -n --depth=1 --filter=tree:0 https://github.com/xybp888/iOS-SDKs.git && cd iOS-SDKs
+          git sparse-checkout set --no-cone iPhoneOS15.5.sdk
+          git checkout
           mv *.sdk $THEOS/sdks
         env:
           THEOS: ${{ github.workspace }}/theos
